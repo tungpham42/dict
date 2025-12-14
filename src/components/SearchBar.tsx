@@ -81,8 +81,16 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, loading }) => {
           fontFamily: "'Merriweather', serif",
           color: "#3E2723",
           marginBottom: 8,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
+        <img
+          src="/MW.png"
+          alt="Merriam-Webster logo"
+          style={{ marginRight: 8 }}
+        />
         Word Lookup
       </Title>
       <Text
