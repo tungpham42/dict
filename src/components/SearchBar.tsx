@@ -1,6 +1,6 @@
 // components/SearchBar.tsx
-import React from "react";
-import { Input, Button, Typography } from "antd";
+import React, { useEffect, useRef } from "react"; // 1. Import hooks
+import { Input, Button, Typography, type InputRef } from "antd"; // 2. Import InputRef type
 import { SearchOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
@@ -12,6 +12,15 @@ interface SearchBarProps {
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch, loading }) => {
+  // 3. Create a ref for the input
+  const searchInputRef = useRef<InputRef>(null);
+
+  // 4. Focus the input on mount
+  useEffect(() => {
+    // Optional: Add a small timeout if the component renders inside a modal or drawer animation
+    searchInputRef.current?.focus();
+  }, []);
+
   return (
     <div style={{ marginBottom: "40px", textAlign: "center" }}>
       <Title
@@ -38,6 +47,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, loading }) => {
         }}
       >
         <Search
+          ref={searchInputRef} // 5. Attach the ref here
           placeholder="e.g. 'Serendipity'"
           allowClear
           enterButton={
