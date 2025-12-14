@@ -240,7 +240,7 @@ const App: React.FC = () => {
             color: "#8d6e63",
           }}
         >
-          Merriam-Webster API Integration &copy; {new Date().getFullYear()}
+          &copy; {new Date().getFullYear()} proudly based on Merriam-Webster
         </Footer>
       </Layout>
     </ConfigProvider>
