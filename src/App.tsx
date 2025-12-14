@@ -67,7 +67,7 @@ const App: React.FC = () => {
     setDictionaryData(null);
     setThesaurusData(null);
     setSuggestions([]);
-    setActiveTab("1"); // Reset to Dictionary tab on new search
+    setActiveTab("1");
 
     try {
       // 1. Fetch BOTH APIs in parallel
