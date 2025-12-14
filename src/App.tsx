@@ -112,7 +112,7 @@ const App: React.FC = () => {
         key: "1",
         label: `Dictionary`,
         children: dictionaryData ? (
-          <Space direction="vertical" size="large" style={{ width: "100%" }}>
+          <Space orientation="vertical" size="large" style={{ width: "100%" }}>
             {dictionaryData.map((entry, index) =>
               entry.shortdef ? (
                 <WordCard key={entry.meta.uuid || index} entry={entry} />
