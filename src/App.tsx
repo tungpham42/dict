@@ -9,6 +9,7 @@ import {
   ConfigProvider,
   Tag,
   Tabs,
+  FloatButton,
 } from "antd";
 import { MWEntry, MWThesaurusEntry } from "./types";
 import AppHeader from "./components/AppHeader";
@@ -242,6 +243,12 @@ const App: React.FC = () => {
         >
           &copy; {new Date().getFullYear()} proudly based on Merriam-Webster
         </Footer>
+        <FloatButton.BackTop
+          type="primary"
+          visibilityHeight={200}
+          tooltip="Scroll to top"
+          style={{ right: 48, bottom: 48 }}
+        />
       </Layout>
     </ConfigProvider>
   );
