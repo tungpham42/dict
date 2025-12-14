@@ -56,8 +56,8 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("1");
 
   // --- API KEYS ---
-  const DICT_KEY = process.env.MW_DICT_KEY;
-  const THESAURUS_KEY = process.env.MW_THESAURUS_KEY;
+  const DICT_KEY = process.env.MW_DICT_API_KEY;
+  const THESAURUS_KEY = process.env.MW_THESAURUS_API_KEY;
 
   const fetchDefinition = async (word: string) => {
     if (!word.trim()) return;
